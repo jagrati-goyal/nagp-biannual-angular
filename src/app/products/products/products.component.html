@@ -18,7 +18,9 @@
       <td>{{product.category}}</td>
       <td>{{product.tags}}</td>
       <td>{{product.returnable}}</td>
-      <td><button class="btn btn-primary" (click)="onView(product.id)">View Product</button></td>
+      <td><button class="btn btn-primary" (click)="onView(product.id)">View Product</button> | <button
+          class="btn btn-primary" (click)="addToCart(product.id)">Add to Cart</button></td>
+
     </tr>
   </tbody>
 </table>

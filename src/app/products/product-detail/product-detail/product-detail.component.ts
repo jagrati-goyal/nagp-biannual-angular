@@ -32,14 +32,13 @@ export class ProductDetailComponent implements OnInit {
   addToCart(id: number) {
     this.cartProduct = this.productService.getProductDetail(id);
     this.cart = {
-      id: 3,
+      id: this.productService.getAllProducts().length + 2,
       name: this.cartProduct.name,
-      quantity: this.cartProduct.quantity,
-      price: this.cartProduct.quantity,
+      quantity: 1,
+      price: this.cartProduct.price,
       returnable: this.cartProduct.returnable,
     };
     this.cartService.addToCart(this.cart);
-    this.router.navigate(['cart']);
-    // this.router.navigate(['cart', this.cart]);
+    this.router.navigate(['/cart']);
   }
 }

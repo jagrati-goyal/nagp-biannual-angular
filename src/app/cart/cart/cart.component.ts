@@ -21,10 +21,10 @@ export class CartComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.cart = this.activatedRoute.snapshot.params.cart;
-    if (this.cart != null) {
-      this.cartService.addToCart(this.cart);
-    }
+    // this.cart = this.activatedRoute.snapshot.params.cart;
+    // if (this.cart != null) {
+    //   this.cartService.addToCart(this.cart);
+    // }
     this.getAllCart();
   }
 
