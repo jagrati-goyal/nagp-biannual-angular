@@ -40,5 +40,6 @@ export class ProductDetailComponent implements OnInit {
     };
     this.cartService.addToCart(this.cart);
     this.router.navigate(['cart']);
+    // this.router.navigate(['cart', this.cart]);
   }
 }

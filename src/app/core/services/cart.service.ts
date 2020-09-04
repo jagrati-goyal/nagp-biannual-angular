@@ -39,4 +39,20 @@ export class CartService {
       this.cart.splice(index, 1);
     }
   }
+
+  increaseQuantity(id: number) {
+    let index = this.cart.findIndex((c) => c.id == id);
+    if (index != -1) {
+      this.cart[index].quantity = this.cart[index].quantity + 1;
+    }
+  }
+
+  decreaseQuantity(id: number) {
+    let index = this.cart.findIndex((c) => c.id == id);
+    if (index != -1) {
+      if (this.cart[index].quantity > 1) {
+        this.cart[index].quantity = this.cart[index].quantity - 1;
+      }
+    }
+  }
 }

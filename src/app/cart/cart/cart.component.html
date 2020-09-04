@@ -14,7 +14,9 @@
   <tbody>
     <tr *ngFor="let cart of cartItems">
       <td>{{cart.name}}</td>
-      <td>{{cart.quantity}}</td>
+      <td><button (click)="decreaseQuantity(cart.id)">-</button>&nbsp;&nbsp;{{cart.quantity}}&nbsp;&nbsp;
+        <button (click)="increaseQuantity(cart.id)">+</button>
+      </td>
       <td>{{cart.price}}</td>
       <td>{{cart.returnable}}</td>
       <td><button class="btn btn-primary" (click)="onDelete(cart.id)">Delete</button></td>
