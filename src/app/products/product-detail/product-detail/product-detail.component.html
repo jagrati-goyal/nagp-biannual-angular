@@ -1,0 +1,12 @@
+<div class="card" style="width: 70rem; height: 50rem;">
+  <img class="card-img-top" height="60%" width="25%" src={{product.image}} alt="Card image cap">
+  <div class="card-body">
+    <h1 class="card-title">{{product.name}}</h1>
+    <h4 class="card-text">{{product.description}}</h4>
+
+    <h3>Returnable : {{product.returnable}}</h3>
+    <h3>Available Quantity: {{product.quantity}}</h3>
+    <p style="font-weight: bold;">Price : {{product.price | currency}}</p>
+    <a href="#" class="btn btn-primary" (click)="addToCart(product.id)">Add to Cart</a>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<table class="table border-stripped">
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Category</th>
+      <th>Tags</th>
+      <th>Returnable?</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.description}}</td>
+      <td>{{product.category}}</td>
+      <td>{{product.tags}}</td>
+      <td>{{product.returnable}}</td>
+      <td><button class="btn btn-primary" (click)="onView(product.id)">View Product</button></td>
+    </tr>
+  </tbody>
+</table>
